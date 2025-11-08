@@ -15,5 +15,5 @@ dolphinrc
 kwalletrc
 mimeapps.list
 pavucontrol.ini
-mpd.log
-mpdstate
+mpd/mpd.log
+mpd/mpdstate
