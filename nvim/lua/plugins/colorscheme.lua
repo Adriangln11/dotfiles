@@ -10,18 +10,30 @@ return {
   --   end,
   -- },
 
+  -- {
+  --   "olimorris/onedarkpro.nvim",
+  --   priority = 1000, -- Ensure it loads firstw
+  --   config = function()
+  --     require("onedarkpro").setup({
+  --       colors = {},
+  --       options = {
+  --         transparency = true,
+  --         cursorline = true,
+  --       },
+  --     })
+  --     vim.cmd("colorscheme vaporwave")
+  --   end,
+  -- },
   {
-    "olimorris/onedarkpro.nvim",
-    priority = 1000, -- Ensure it loads firstw
+    "navarasu/onedark.nvim",
+    priority = 1000, -- make sure to load this before all the other start plugins
     config = function()
-      require("onedarkpro").setup({
-        colors = {},
-        options = {
-          transparency = true,
-          cursorline = true,
-        },
+      require("onedark").setup({
+        style = "cool",
+        transparent = true,
       })
-      vim.cmd("colorscheme vaporwave")
+      -- Enable theme
+      require("onedark").load()
     end,
   },
 
