@@ -35,3 +35,12 @@ datestr=%a, %B %e
 timestr=%I:%M %p
 #fade-in=1
 ignore-empty-password
+
+layout-text-color=F8F8F2
+layout-bg-color=282A36
+layout-border-color=a4bfeb
+layout-border-size=2
+layout-font="Inter"
+layout-padding=10
+layout-radius=10
+layout-position=bottom-right

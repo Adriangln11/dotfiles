@@ -24,12 +24,12 @@
     "separate-outputs": true
   },
 
-  "clock": {
-    "interval": 60,
-    "format": "{:%H:%M}",
-    "tooltip-format": "{:%A, %d %B %Y}"
-  },
 
+"clock": {
+  "interval": 60,
+  "format": "{:%d/%m/%Y  %H:%M}",
+  "tooltip-format": "{:%A, %d %B %Y}"
+},
   "network": {
     "format-wifi": " {bandwidthDownBits}",
     "format-ethernet": "󰈀 {bandwidthDownBits}",
