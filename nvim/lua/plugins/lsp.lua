@@ -12,6 +12,11 @@ return {
         "tailwindcss-language-server",
         "typescript-language-server",
         "css-lsp",
+        "pyright",
+        "black",
+        "pylint",
+        "prettier",
+        "eslint_d",
       })
     end,
   },
@@ -128,6 +133,18 @@ return {
                   indent_size = "2",
                   continuation_indent_size = "2",
                 },
+              },
+            },
+          },
+        },
+        pyright = {
+          settings = {
+            python = {
+              analysis = {
+                typeCheckingMode = "basic",
+                autoSearchPaths = true,
+                useLibraryCodeForTypes = true,
+                diagnosticMode = "workspace",
               },
             },
           },
