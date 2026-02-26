@@ -80,7 +80,8 @@
   "on-click": "rmpc togglepause",
   "on-click-right": "rmpc next",
   "on-click-middle": "rmpc prev",
-  "tooltip": false
+  "tooltip": false,
+  "scroll-step": 5
 }
 
 
