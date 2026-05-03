@@ -1,0 +1,99 @@
+{
+  "layer": "top",
+  "margin-top": 5,
+  "margin-bottom": 0,
+
+  "modules-left": ["custom/launcher", "hyprland/workspaces", "hyprland/window"],
+  "modules-center": ["clock"],
+  "modules-right": ["custom/music", "network", "cpu", "memory", "pulseaudio", "hyprland/language", "battery", "custom/power"],
+
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "on-click": "activate",
+    "all-outputs": true,
+    "format": "{icon}",
+    "format-icons": {
+      "active": "",
+      "default": ""
+    }
+  },
+
+  "hyprland/window": {
+    "format": "{title}",
+    "max-length": 50,
+    "separate-outputs": true
+  },
+
+
+"clock": {
+  "interval": 60,
+  "format": "{:%d/%m/%Y  %H:%M}",
+  "tooltip-format": "{:%A, %d %B %Y}"
+},
+  "network": {
+    "format-wifi": " {bandwidthDownBits}",
+    "format-ethernet": "󰈀 {bandwidthDownBits}",
+    "interval": 30
+  },
+
+  "pulseaudio": {
+    "format": " {volume}%",
+    "format-muted": " {volume}%",
+    "on-click-middle": "pamixer --toggle-mute",
+    "on-click": "pamixer --increase 5",
+    "on-click-right": "pamixer --decrease 5",
+    "scroll-step": 5
+  },
+
+  "cpu": {
+    "interval": 15,
+    "format": " {usage}%"
+  },
+
+  "memory": {
+    "interval": 30,
+    "format": " {used}G"
+  },
+
+  "custom/launcher": {
+    "format": "",
+    "on-click": "wofi --show drun"
+  },
+
+  "custom/power": {
+    "format": "⏻",
+    "on-click": "wlogout"
+  },
+
+  "hyprland/language": {
+    "format": " {}",
+    "format-es": "es",
+    "format-en": "en",
+    "on-click": "hyprctl switchxkblayout sonix-usb-device next"
+  },
+
+  "battery": {
+  "format": "{capacity}% {icon}",
+  "format-icons": {
+    "charging": "⚡",
+    "discharging": "▮",
+    "full": "✔️"
+  },
+  "interval": 30,
+  "tooltip": true
+},
+
+"custom/music": {
+  "format": "  {}",
+  "return-type": "plain",
+  "exec": "rmpc song | grep -o '\"title\":\"[^\"]*\"' | cut -d'\"' -f4 || echo 'No song'",
+  "interval": 5,
+  "on-click": "rmpc togglepause",
+  "on-click-right": "rmpc next",
+  "on-click-middle": "rmpc prev",
+  "tooltip": false,
+  "scroll-step": 5
+}
+
+
+}
