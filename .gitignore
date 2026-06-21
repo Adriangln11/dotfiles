@@ -25,3 +25,6 @@ trashrc
 kconf_updaterc
 kdeglobals
 qt5ct/
+QtProject.conf
+btop/
+nextjs-nodejs/
