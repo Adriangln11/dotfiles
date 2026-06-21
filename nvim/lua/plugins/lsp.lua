@@ -17,6 +17,7 @@ return {
         "pylint",
         "prettier",
         "eslint_d",
+        "intelephense",
       })
     end,
   },
@@ -28,23 +29,29 @@ return {
       inlay_hints = { enabled = false },
       ---@type lspconfig.options
       servers = {
-        ['*'] = {
+        ["*"] = {
           keys = {
             {
               "gd",
-              function() require("telescope.builtin").lsp_definitions({ reuse_win = false }) end,
+              function()
+                require("telescope.builtin").lsp_definitions({ reuse_win = false })
+              end,
               desc = "Goto Definition",
               has = "definition",
             },
             {
               "gr",
-              function() require("telescope.builtin").lsp_references({ reuse_win = false }) end,
+              function()
+                require("telescope.builtin").lsp_references({ reuse_win = false })
+              end,
               desc = "Goto References",
               has = "reference",
             },
             {
               "gi",
-              function() require("telescope.builtin").lsp_implementations({ reuse_win = false }) end,
+              function()
+                require("telescope.builtin").lsp_implementations({ reuse_win = false })
+              end,
               desc = "Goto Implementation",
               has = "implementation",
             },
