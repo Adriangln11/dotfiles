@@ -33,13 +33,15 @@
   "network": {
     "format-wifi": " {bandwidthDownBits}",
     "format-ethernet": "󰈀 {bandwidthDownBits}",
-    "interval": 30
+    "interval": 30,
+    "on-click": "kitty impala"
+
   },
 
   "pulseaudio": {
     "format": " {volume}%",
     "format-muted": " {volume}%",
-    "on-click-middle": "pamixer --toggle-mute",
+    "on-click-middle": "kitty wiremix",
     "on-click": "pamixer --increase 5",
     "on-click-right": "pamixer --decrease 5",
     "scroll-step": 5
@@ -63,10 +65,10 @@
     "on-click": "rofi -show drun"
   },
 
-  "custom/power": {
-    "format": "⏻",
-    "on-click": "wlogout"
-  },
+  // "custom/power": {
+  //   "format": "⏻",
+  //   "on-click": "wlogout"
+  // },
 
   "hyprland/language": {
     "format": " {}",
