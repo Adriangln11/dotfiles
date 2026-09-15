@@ -18,6 +18,7 @@ return {
         "prettier",
         "eslint_d",
         "intelephense",
+        "typescript-language-server",
       })
     end,
   },
@@ -60,7 +61,17 @@ return {
         cssls = {},
         tailwindcss = {
           root_dir = function(...)
-            return require("lspconfig.util").root_pattern(".git")(...)
+            return require("lspconfig.util").root_pattern(
+              "tailwind.config.js",
+              "tailwind.config.cjs",
+              "tailwind.config.mjs",
+              "tailwind.config.ts",
+              "postcss.config.js",
+              "postcss.config.cjs",
+              "postcss.config.mjs",
+              "package.json",
+              ".git"
+            )(...)
           end,
         },
         tsserver = {
